@@ -28,11 +28,11 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * Docker, 3 katmandan oluşmaktadır. Bu dosya sistemine [Union File System](https://en.wikipedia.org/wiki/UnionFS "Union File System") denir. İlk katmanda işletim sistemin çalışması için gerekli dosyalar bulunur. İkinci katmanda uygulama bulunur. 3. katmanda ise terminal bağlantısı bulunur.
 
-* Bu katmanlar sadece okunabilir katmanlardır. (Read Only / R/O)
+* Bu katmanlar sadece okunabilir katmanlardır. (Read Only - R/O)
 
 * Container oluşturulduğu zaman imaj dosyasının yeni bir kopyasını oluşturmaz. Sistemde aynı imajı farklı containerlar kullanabilir. Yerden tasarruf sağlanıyor ve imaj bir defa ayağa kaldırıldıktan sonra ikinci defa daha hızlı çalışıyor. 
 
-* Tüm katmanlar ayrı ayrı saklanmasına rağmen hepsini bir arada görmemize Union File System sağlıyor. 
+* Tüm katmanlar ayrı ayrı saklanmasına rağmen hepsini bir arada görmemizi Union File System sağlıyor. 
 
 ## Docker Volumeler
 
