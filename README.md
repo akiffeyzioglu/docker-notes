@@ -1,5 +1,5 @@
 ## Docker Notlarım
-Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "A'dan Z'ye Docker") eğitmini izlerken aldığım notları içermektedir. 
+Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "A'dan Z'ye Docker") eğitimini izlerken aldığım notları içermektedir. 
 
 ## Docker Nedir?
 
