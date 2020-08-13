@@ -44,7 +44,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker info:` Sisteminizde bulunan containerları, ve diğer sistem bilgilerinizi görmenizi sağlar. 
 
-`docker run hello-world:` hello-world adında container çalıştırır. 
+`docker container run hello-world:` hello-world adında container çalıştırır. 
 
 `docker ps:` Çalışan containerları listeler.
 
