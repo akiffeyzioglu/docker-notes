@@ -64,7 +64,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker container prune:` Çalışmayan tüm containerları siler. 
 
-`docker image prune:` Çalışmayan tüm imageleri siler.
+`docker image prune -a:` Çalışmayan tüm imageleri siler.
 
 `docker volume create firstvolume:` firstvolume adında volume oluşturur. 
 
