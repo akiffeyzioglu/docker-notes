@@ -54,7 +54,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker container ls -aq:` Sistemde bulunan tüm containerların ID'sini listeler.
 
-`docker stop hello-world:` hello-world containerını durdurur.
+`docker container stop hello-world:` hello-world containerını durdurur.
 
 `docker container logs hello-world:` hello-world containerının loglarını gösterir.
 
