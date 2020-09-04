@@ -79,3 +79,5 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker history "image-name":` Image'in geçmişini gösterir. 
 
 `docker network ls:` Docker Network objelerini listeler. 
+
+`docker exec -it "container_id" sh:` Uzaktaki containera bir shell bağlantısı ile bağlanmamızı sağlar. 
