@@ -86,7 +86,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker exec -it "container_id" sh:` Uzaktaki containera bir shell bağlantısı ile bağlanmamızı sağlar. 
 
-`docker container run -p 8080:80 "image-name":` Çalıştıracağımız containera port numarası vererek çalıştırabiliriz. 8080 hostun portunu, 80 ise containerın portunu belirtir. 
+`docker container run -p 8080:80 "image-name":` Çalıştırılan containera port numarası verilerek çalıştırabilir. 8080 hostun portunu, 80 ise containerın portunu belirtir. 
 
 `docker container run -dit "image-name" sh:` "-dit" komutu -d -it -tty birleşimidir. Containera interaktiflik ve sözde terminal bağlantısını ekleyerek arka planda çalıştırır. 
 
