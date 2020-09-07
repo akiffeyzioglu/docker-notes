@@ -64,6 +64,8 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker container rm "container name or id":` İsmi ya da ID'i verilen containerı siler. 
 
+`docker container rm -f "container name or id":` İsmi ya da ID'si verilen containerı çalışırken dahi siler. 
+
 `docker container prune:` Çalışmayan tüm containerları siler. 
 
 `docker image prune -a:` Çalışmayan tüm imageleri siler.
@@ -85,3 +87,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker exec -it "container_id" sh:` Uzaktaki containera bir shell bağlantısı ile bağlanmamızı sağlar. 
 
 `docker container run -p 8080:80 "image-name":` Çalıştıracağımız containera port numarası vererek çalıştırabiliriz. 8080 hostun portunu, 80 ise containerın portunu belirtir. 
+
+`docker container run -dit "image-name" sh:` "-dit" komutu -d -it -tty birleşimidir. Containera interaktiflik ve sözde terminal bağlantısını ekleyerek arka planda çalıştırır. 
+
+`docker container run -dit --net "network-name" "image-name" sh:` Oluşturulan network ile container oluşturur. 
