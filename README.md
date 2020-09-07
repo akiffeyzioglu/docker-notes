@@ -91,3 +91,5 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker container run -dit "image-name" sh:` "-dit" komutu -d -it -tty birleşimidir. Containera interaktiflik ve sözde terminal bağlantısını ekleyerek arka planda çalıştırır. 
 
 `docker container run -dit --net "network-name" "image-name" sh:` Oluşturulan network ile container oluşturur. 
+
+`docker attach "container-name or id":` Arka planda çalıştırılan containera bağlanmak için kullanılır. 
