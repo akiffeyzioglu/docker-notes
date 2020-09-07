@@ -95,3 +95,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker attach "container-name or id":` Arka planda çalıştırılan containera bağlanmak için kullanılır. 
 
 `docker network connect "network-name" "container name or id":` Adı veya ID'si verilen containerı kullanıcı tarafından oluşturulan networke bağlamayı sağlar. Network bağlama işlemi sadece kullanıcı tarafından oluşturulan networkte yapılabilir. 
+
+`docker network disconnect "network-name" "container name or id":` Adı veya ID'si verilen containerı kullanıcı tarafından oluşturulan network ile bağlantısını keser. 
+
+`docker network rm "network-name:` Network silmeyi sağlar. 
