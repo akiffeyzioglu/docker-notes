@@ -93,3 +93,5 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker container run -dit --net "network-name" "image-name" sh:` Oluşturulan network ile container oluşturur. 
 
 `docker attach "container-name or id":` Arka planda çalıştırılan containera bağlanmak için kullanılır. 
+
+`docker network connect "network-name" "container name or id":` Adı veya ID'si verilen containerı kullanıcı tarafından oluşturulan networke bağlamayı sağlar. Network bağlama işlemi sadece kullanıcı tarafından oluşturulan networkte yapılabilir. 
