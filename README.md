@@ -101,3 +101,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker network rm "network-name:` Network silmeyi sağlar. 
 
 `docker logs "container name or id":` Container çalıştıktan sonra logları getirir. 
+
+`docker top "container name or id:` Containerda hangi işlemlerin çalıştığını gösterir.
+
+`docker stats "container name or id":` Çalışan containerın ne kadar kaynak kullandığını gösterir. 
