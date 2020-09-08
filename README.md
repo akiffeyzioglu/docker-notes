@@ -24,6 +24,8 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * Aynı imaj dosyası ile farklı containerlar oluşturulabilir. 
 
+* Her container limit berlirtilmezse sistem kaynaklarının tamamını kullanabilir. 
+
 ## Docker Katmanlı Dosya Sistemi Yapısı
 
 * Docker, 3 katmandan oluşmaktadır. Bu dosya sistemine [Union File System](https://en.wikipedia.org/wiki/UnionFS "Union File System") denir. İlk katmanda işletim sistemin çalışması için gerekli dosyalar bulunur. İkinci katmanda uygulama bulunur. 3. katmanda ise terminal bağlantısı bulunur.
