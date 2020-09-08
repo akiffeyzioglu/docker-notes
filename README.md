@@ -99,3 +99,5 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker network disconnect "network-name" "container name or id":` Adı veya ID'si verilen containerı kullanıcı tarafından oluşturulan network ile bağlantısını keser. 
 
 `docker network rm "network-name:` Network silmeyi sağlar. 
+
+`docker logs "container name or id":` Container çalıştıktan sonra logları getirir. 
