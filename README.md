@@ -107,3 +107,9 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker top "container name or id:` Containerda hangi işlemlerin çalıştığını gösterir.
 
 `docker stats "container name or id":` Çalışan containerın ne kadar kaynak kullandığını gösterir. 
+
+`docker container run -d --memory=100m "image-name":` Oluşturulacak containera 100mb bellek limiti tanımlar. 
+
+`docker container run -d --cpus="1.5" "image-name:` Sistemde bulunan işlemci çekirdeklerinin 1.5 tanesini kullanmasını sağlar. 
+
+`docker container run -d --cpuset-cpus="1,4" "image-name":` Sistemde bulunan işlemcinin 1 ve 4 numaralı işlemcilerini kullanmasını sağlar. 
