@@ -78,6 +78,10 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker volume ls:` Sistemde bulunan volumeleri listeler.
 
+`docker volume rm "volume-name":` Adı verilen volumeü siler. 
+
+`docker volume prune:` Sistemde bulunan tüm volumeleri siler. 
+
 `docker container run --rm -it hello-world sh:` Containerı çalıştırır. "--rm" container oluşturulduktan sonra sil demektir. "-it" "--interactive" ve "--tty" birleşimidir. Containera interaktif bağlantı yapar. "sh" ile de uzak makinedeki containera terminal bağlantısı ekler. "--rm" sadece container interaktif çalışırken olur. "-d" (detach) ile arka planda çalışsın diyemiyoruz.
 
 `docker history "image-name":` Image'in geçmişini gösterir. 
