@@ -40,6 +40,10 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * [Volumeler](https://docs.docker.com/storage/volumes/ "Volume"), container dışı veri saklamak için kullanılır. 
 
+## Ortam Değişkenleri(Enviroment Variable)
+
+* Ortam değişkenleri tanımlanırken büyük küçük harflere dikkat edilmelidir. deg1 ile DEG1 aynı şeyler değildir. 
+
 ## Docker Komutları 
 
 `docker version:` Bu komut ile docker sürümünüzü öğrenebilirsiniz. 
@@ -117,3 +121,5 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker container run -d --cpus="1.5" "image-name:` Sistemde bulunan işlemci çekirdeklerinin 1.5 tanesini kullanmasını sağlar. 
 
 `docker container run -d --cpuset-cpus="1,4" "image-name":` Sistemde bulunan işlemcinin 1 ve 4 numaralı işlemcilerini kullanmasını sağlar. 
+
+`docker container run --env deg1=deneme "image-name":` deg1 adında ortam değişkeni tanımlar.
