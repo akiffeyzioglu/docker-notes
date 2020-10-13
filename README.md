@@ -40,7 +40,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * [Volumeler](https://docs.docker.com/storage/volumes/ "Volume"), container dışı veri saklamak için kullanılır. 
 
-## Ortam Değişkenleri(Enviroment Variable)
+## Ortam Değişkenleri (Enviroment Variable)
 
 * Ortam değişkenleri tanımlanırken büyük küçük harflere dikkat edilmelidir. deg1 ile DEG1 aynı şeyler değildir. 
 
