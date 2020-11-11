@@ -40,6 +40,92 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * [Volumeler](https://docs.docker.com/storage/volumes/ "Volume"), container dışı veri saklamak için kullanılır. 
 
+# Docker Network Objeleri
+
+* Default gelen 3 network driverı vardır. Bridge, Host ve None.
+
+* Docker'ın default network driverı Bridge'dir.
+
+* Aynı network driverına bağlı containerlar birbirleriyle direkt haberleşebilirler.
+
+* Host networku direkt sistemdeki ağı kullanır. Arada bir izolasyon yoktur.
+
+* none driverı network bağlantısı sağlamaz.
+
+* Default TCP ile çalışır. UDP de çalışabilir.
+
+* Bir container birden fazla networke bağlanabilir.
+
+# Docker Image İsimlendirme
+
+* Docker imajlarına verilen isimler depolandığı yeri belirtir.
+
+* Docker'da her objenin eşsiz bir ID'si vardır.
+
+* İmaj isminin ilk kısmı registry URL, ikinci kısmı repository ve üçüncü kısmı ise tagdir.
+
+* Tag yapısı ile birden fazla imajın saklanabilmesi sağlanır.
+
+- Spesifik tag belirtilmezse default latet tagi ile işlem yapılır.
+
+# Dockerfile
+
+* Dockerfile dosyası oluşturulurken "Dockerfile" şeklinde oluşturulmalıdır. Uzantı belirtilmesine gerek yoktur.
+
+* Dockerfile oluştururken komutların sıralaması önemlidir.
+
+* ENV komutu Dockerfile içerisinde yazılmazsa, ortam değişkenleri base imajdan gelir.
+
+* Dockerfile dosyasında birdene fazla FROM komutu olabilir.
+
+`Komutlar:`
+
+* FROM: Oluşturulacak imajın hangi base imajdan oluşturulacağını belirtir. Dockerfile dosyası içerinde olması zorunlu olan tek komuttur.
+
+* RUN: İmaj oluşturulurken Shell'de çalışması gereken bir komut varsa RUN ile yazılır.
+
+* WORKDIR: Dizin değiştirmek için kullanılır. cd komutu ile tek farkı dizin yoksa oluşturulur.
+
+* COPY: İmajın içerisine dosya kopyalar.
+
+* ADD: İmajın içerisine dosya ekler. 
+
+* ARG: İmaj build edilirken argüman almasını sağlar.
+
+* EXPOSE: Bu imajdan oluşturulacak containerların hangi portlar üzerinden yayınlanacağını EXPOSE ile belirtilir.
+
+* CMD: Bu imajdan container oluşturulduğu zaman varsayılan olarak çalıştırılmak istenen komut yazılır.
+
+* HEALTHCHECK: Bu komut ile containerın çalışıp çalışmadığı kontrol edilebilir. 
+
+* ENV: Ortam değişkeni tanımlanmasını sağlar.
+
+* LABEL: Bu komut Dockerfile içerisine metadata ekler. 
+
+`ADD ve COPY Farkı`
+
+* ADD ile COPY aynı işlevleri görür fakat ADD dosya kaynağının URL olmasını da sağlar.
+
+* ADD ile bir .tar dosyası belirtilirse bu arşiv imaja untar yapılarak kopyalanır.
+
+`ENTRYPOINT ve CMD Farkı`
+
+* ENTRYPOINT, CMD gibi imaj oluşturulduktan sonra değiştirilemez.
+
+* Her iki komutta yazılıyorsa CMD komutunda yazılanlar ENTRYPOINT'e parametre olarak eklenir.
+
+# Multi Stage Build
+
+* Bu özellik sayesinde imaj oluşturma aşamaları kademelere bölünebilir.
+
+* Bu sayede ilk kademede oluşturulan imaj içerisindeki dosyaları bir sonraki kademede oluşturacağımız imaja kopyalayabilmemize olanak sağlar. 
+
+# Docker Save - Load
+
+* Bu özellik sayesinde imaj bir tar arşivine dönüştürülebilir. 
+
+* Aynı şekilde tar arşivi de imaja dönüştürülebilir. 
+
 # Ortam Değişkenleri (Environment Variables)
 
 * Ortam değişkenleri tanımlanırken büyük küçük harflere dikkat edilmelidir. deg1 ile DEG1 aynı şeyler değildir. 
@@ -102,6 +188,8 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 # Image
 
+`docker image build -t image-name:` Dockerfile yazılıktan sonra image build işlemini gerçekleştirir. 
+
 `docker image rm "image-name":` Image siler.
 
 `docker image prune -a:` Çalışmayan tüm imageleri siler.
@@ -137,3 +225,13 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker logs "container name or id":` Container çalıştıktan sonra logları getirir. 
 
 `docker logs -f "container name or id":` Çalışan containerın anlık loglarını gösterir.
+
+# Save and Load
+
+* `docker save "image-name" -o "image-name.tar":` İmajı tar arşivine dönüştürür.
+
+* `docker load -i "image-name.tar":` tar arşivini imaja çevirir. 
+
+# Docker Commit 
+
+* `docker commit "container-id" "image-name":` Container'daki değişikliklerden yeni bir imaj oluşturur. 
