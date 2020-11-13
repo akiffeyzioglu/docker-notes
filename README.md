@@ -188,13 +188,15 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 # Image
 
-`docker image build -t image-name:` Dockerfile yazılıktan sonra image build işlemini gerçekleştirir. 
+`docker image build -t image-name .:` Dockerfile yazılıktan sonra image build işlemini gerçekleştirir. 
 
-`docker image rm "image-name":` Image siler.
+`docker image build -t "image-name" -f "dockerfile-name" .:` Farklı bir Dockerfile'dan imaj build eder. 
 
-`docker image prune -a:` Çalışmayan tüm imageleri siler.
+`docker image rm "image-name":` İmaj siler.
 
-`docker history "image-name":` Image'in geçmişini gösterir. 
+`docker image prune -a:` Çalışmayan tüm imajları siler.
+
+`docker history "image-name":` İmaj'ın geçmişini gösterir. 
 
 # Volume
 
