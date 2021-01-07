@@ -11,6 +11,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 * [Docker İmaj İsimlendirme](#Docker-İmaj-İsimlendirme)
 * [Dockerfile](#Dockerfile)
 * [Docker Compose](#Docker-Compose)
+* [Docker Swarm](#Docker-Swarm)
 * [Multi Stage Build](#Multi-Stage-Build)
 * [Docker Save and Load](#Docker-Save-and-Load)
 * [Ortam Değişkenleri](#Ortam-Değişkenleri)
@@ -21,6 +22,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
   * [Volume](#Volume)
   * [Network](#Network)
   * [Compose](#Compose)
+  * [Swarm](#Swarm)
   * [Logs](#Logs)
   * [Save and Load](#Save-and-Load)
   * [Docker Commit](#Docker-Commit)
@@ -145,6 +147,32 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 * Dosya adı docker-compose.yaml ya da docker-compose.yml olmalıdır. Compose dosyasının ismi farklı olursa servisler ayağa kaldırılırken -p ile dosya belirtilmelidir.
 
 * docker-compose geliştirme yaparken kullanılır. Production’da kullanılmaz. 
+
+# Docker Swarm 
+
+* Node = Sunucu, Cluster = Node Topluluğu
+
+* Swarm'da containerlara task denir. 
+
+* Docker Swarm, Docker Engine ile birlikte gelen container orchestration uygulamasıdır.
+
+* Docker Swarm Cluster’da oluşturabileceğimiz en temel obje servislerdir.
+
+* Bir Docker ana bilgisayar havuzunu tek bir sanal ana bilgisayara çevirir.
+
+* Ana sunucuya Swarm Manager, diğer sunuculara ise Swarm Worker denir. 
+
+* Worker node’larda komut çalıştırılamaz.
+
+* Node’ları manager olan Leader yönetir. Komutlar Leader olan sunucu üzerinden verilir. Manager olan diğer node üzerinden de komut verilebilir fakat o manager da işleri yapması için Leader’a komutları iletir.
+
+* Manager’larda Worker node olarak davranır ve worker olarak çalışabilir. Production’da sadece worker kullanılır. Manager üzerinden komutlar verilir.
+
+* Worker’lardan birinde bir problem çıkarsa ve container çalışmayı durdurursa istenilen durum ile mevcut durum aynı hale Leader tarafından getirilir.
+
+* İki servis modu vardır. Replicated ve Global. Varsayılan olarak replicated çalışır. Replicated mod, kaç replika olacağı belirtilen durum, global ise belirtilmediği moddur. Tüm node’larda otomatik olarak hepsinde çalışır. Antivirüs gibi servisler global olarak çalıştırılır ve tüm node’larda olduğundan emin olunur.
+
+* Service oluştururken replica sayısı belirtilmezse default 1 tane oluşturulur.
 
 # Multi Stage Build
 
@@ -275,6 +303,31 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker-compose exec "service-name" sh:` Compose ile oluşturulan servise interkativ shell bağlantısı yapar. 
 
 `docker-compose build:` yaml dosyasında build ile imaj oluşturulmuş ise imajj da sonradan yapılan değişiklikleri kaydeder ve yeni değişikliklerin olduğu imajı kullanılmaya hazır hale getirir
+
+# Swarm 
+
+`docker swarm init:` Komutun çalıştırıldığı makine de swarm active edilir. 
+
+`docker swarm init --advertise-addr "ip-addr":` IP adresi verilen makine de swarm active edilir. 
+
+`docker swarm join-token worker:` Worker eklemek için gerekli olan tokenir getirir. 
+
+`docker swarm join-token manager:` Manager eklemek için gerekli olan tokeni getirir. 
+
+`docker node ls:` Cluster'da bulun node'ları listeler. 
+
+`docker service create --name "service-name" --replicas=5 -p 8080:80 "image-name":` İsmi service-name olan, 8080 portu servisin 80 portuna yönlendiren ve 5 adet replicası olan servisi oluşturur. 
+
+`docker service ps "service-name":` İsmi verilen servisin task'leri gösterir.  
+
+`docker service ls:` Çalışan servisleri listeler.
+
+`docker service inspect "service-name":` İsmi verilen servisin ayrıntılarını gösterir. 
+
+`docker service logs "service-name":` İsmi verilen servisin loglarını gösterir. 
+
+`docker service rm "service-name":` İsmi verilen servisi siler. Doğrulama yapmadan direkt olarak servisi siler, kullanırken dikkatli olunmalıdır. 
+
 
 # Logs
 
