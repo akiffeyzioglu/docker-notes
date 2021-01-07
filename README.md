@@ -1,6 +1,28 @@
 # Docker Notlarım
 Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "A'dan Z'ye Docker") eğitimini izlerken aldığım notları içermektedir. 
 
+## İçerik Tablosu
+
+* [Docker Nedir](#Docker-Nedir)
+* [Container Temelleri](#Container-Temelleri)
+* [Docker'ın Katmanlı Dosya Sistemi Yapısı](#Docker'ın-Katmanlı-Dosya-Sistemi-Yapısı)
+* [Docker Volume'ler](#Docker-Volume'ler)
+* [Docker Network Objeleri](#Docker-Network-Objeleri)
+* [Docker İmaj İsimlendirme](#Docker-İmaj-İsimlendirme)
+* [Dockerfile](#Dockerfile)
+* [Multi Stage Build](#Multi-Stage-Build)
+* [Docker Save and Load](#Docker-Save-and-Load)
+* [Ortam Değişkenleri](#Ortam-Değişkenleri)
+* [Docker Komutları](#Docker-Komutları)
+  * [Genel](#Genel)
+  * [Container](#Container)
+  * [Image](#Image)
+  * [Volume](#Volume)
+  * [Network](#Network)
+  * [Logs](#Logs)
+  * [Save and Load](#Save-and-Load)
+  * [Docker Commit](#Docker-Commit)
+
 # Docker Nedir?
 
 [Docker](https://tr.wikipedia.org/wiki/Docker "Docker"), "konteynerleştirme" olarak da bilinen işletim sistemi seviyesinde sanallaştırma sağlayan bir bilgisayar programıdır. İlk sürümü 2013'te yayınlanmıştır. Docker, "konteyner" adı verilen yazılım paketlerini çalıştırmak için kullanılmaktadır. 
@@ -26,7 +48,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * Her container limit berlirtilmezse sistem kaynaklarının tamamını kullanabilir. 
 
-# Docker Katmanlı Dosya Sistemi Yapısı
+# Docker'ın Katmanlı Dosya Sistemi Yapısı
 
 * Docker, 3 katmandan oluşmaktadır. Bu dosya sistemine [Union File System](https://en.wikipedia.org/wiki/UnionFS "Union File System") denir. İlk katmanda işletim sistemin çalışması için gerekli dosyalar bulunur. İkinci katmanda uygulama bulunur. 3. katmanda ise terminal bağlantısı bulunur.
 
@@ -36,7 +58,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * Tüm katmanlar ayrı ayrı saklanmasına rağmen hepsini bir arada görmemizi Union File System sağlıyor. 
 
-# Docker Volumeler
+# Docker Volume'ler
 
 * [Volumeler](https://docs.docker.com/storage/volumes/ "Volume"), container dışı veri saklamak için kullanılır. 
 
@@ -56,7 +78,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * Bir container birden fazla networke bağlanabilir.
 
-# Docker Image İsimlendirme
+# Docker İmaj İsimlendirme
 
 * Docker imajlarına verilen isimler depolandığı yeri belirtir.
 
@@ -120,13 +142,13 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * Bu sayede ilk kademede oluşturulan imaj içerisindeki dosyaları bir sonraki kademede oluşturacağımız imaja kopyalayabilmemize olanak sağlar. 
 
-# Docker Save - Load
+# Docker Save and Load
 
 * Bu özellik sayesinde imaj bir tar arşivine dönüştürülebilir. 
 
 * Aynı şekilde tar arşivi de imaja dönüştürülebilir. 
 
-# Ortam Değişkenleri (Environment Variables)
+# Ortam Değişkenleri
 
 * Ortam değişkenleri tanımlanırken büyük küçük harflere dikkat edilmelidir. deg1 ile DEG1 aynı şeyler değildir. 
 
