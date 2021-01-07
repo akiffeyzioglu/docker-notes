@@ -10,6 +10,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 * [Docker Network Objeleri](#Docker-Network-Objeleri)
 * [Docker İmaj İsimlendirme](#Docker-İmaj-İsimlendirme)
 * [Dockerfile](#Dockerfile)
+* [Docker Compose](#Docker-Compose)
 * [Multi Stage Build](#Multi-Stage-Build)
 * [Docker Save and Load](#Docker-Save-and-Load)
 * [Ortam Değişkenleri](#Ortam-Değişkenleri)
@@ -19,6 +20,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
   * [Image](#Image)
   * [Volume](#Volume)
   * [Network](#Network)
+  * [Compose](#Compose)
   * [Logs](#Logs)
   * [Save and Load](#Save-and-Load)
   * [Docker Commit](#Docker-Commit)
@@ -136,6 +138,14 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * Her iki komutta yazılıyorsa CMD komutunda yazılanlar ENTRYPOINT'e parametre olarak eklenir.
 
+# Docker Compose
+
+* Docker Compose, servisleri tek dosyadan yönetmeyi sağlar. Servisler yaml dosyaları üzerinden konfigüre edilir.
+
+* Dosya adı docker-compose.yaml ya da docker-compose.yml olmalıdır. Compose dosyasının ismi farklı olursa servisler ayağa kaldırılırken -p ile dosya belirtilmelidir.
+
+* docker-compose geliştirme yaparken kullanılır. Production’da kullanılmaz. 
+
 # Multi Stage Build
 
 * Bu özellik sayesinde imaj oluşturma aşamaları kademelere bölünebilir.
@@ -243,6 +253,28 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker network disconnect "network-name" "container name or id":` Adı veya ID'si verilen containerı kullanıcı tarafından oluşturulan network ile bağlantısını keser. 
 
 `docker network rm "network-name:` Network silmeyi sağlar. 
+
+# Compose
+
+`docker-compose ps:` docker-compose ile oluşturulmuş çalışan containerları listeler.
+
+`docker-compose ps -a:` docker-compose ile oluşturulmuş tüm containerları listeler.
+
+`docker-compose up:` Servisleri ayağa kaldırır.Shell'e geri dönmez. 
+
+`docker-compose down:` Servisleri durdurur ve siler. yaml dosyasında volume tanımlanmışsa volumleri silmez. "build" ile yaml dosyasından imaj oluşturulmuş ise imaj da silinmez.
+
+`docker-compose up -d:` Servisleri ayağa kaldırır. Shell' geri döner. 
+
+`docker-compose config:` yaml dosyasının içeriğini ters sıralama ile listeler.
+
+`docker-compose images:` Oluşturulan servislerin hangi imajlardan oluşturulduğunu listeler.
+
+`docker-compose logs:` Servislerin loglarını görüntüler.
+
+`docker-compose exec "service-name" sh:` Compose ile oluşturulan servise interkativ shell bağlantısı yapar. 
+
+`docker-compose build:` yaml dosyasında build ile imaj oluşturulmuş ise imajj da sonradan yapılan değişiklikleri kaydeder ve yeni değişikliklerin olduğu imajı kullanılmaya hazır hale getirir
 
 # Logs
 
