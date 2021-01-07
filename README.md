@@ -306,9 +306,9 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 # Swarm 
 
-`docker swarm init:` Komutun çalıştırıldığı makine de swarm active edilir. 
+`docker swarm init:` Komutun çalıştırıldığı makine de swarm aktif edilir. 
 
-`docker swarm init --advertise-addr "ip-addr":` IP adresi verilen makine de swarm active edilir. 
+`docker swarm init --advertise-addr "ip-addr":` IP adresi verilen makine de swarm aktif edilir. 
 
 `docker swarm join-token worker:` Worker eklemek için gerekli olan tokenir getirir. 
 
