@@ -252,6 +252,8 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker image build -t "image-name" -f "dockerfile-name" .:` Farklı bir Dockerfile'dan imaj build eder. 
 
+`docker images:` Sistemde bulunan imajları listeler. 
+
 `docker image rm "image-name":` İmaj siler.
 
 `docker image prune -a:` Çalışmayan tüm imajları siler.
