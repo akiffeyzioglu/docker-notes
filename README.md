@@ -208,37 +208,37 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker container ls -aq:` Sistemde bulunan tüm containerların ID'sini listeler.
 
-`docker container run hello-world:` hello-world adında container çalıştırır. 
+`docker run hello-world:` hello-world adında container çalıştırır. 
 
-`docker container start hello-world:` hello-world containerı başlatır.
+`docker start hello-world:` hello-world containerı başlatır.
 
-`docker container stop hello-world:` hello-world containerını durdurur.
+`docker stop hello-world:` hello-world containerını durdurur.
 
-`docker container logs hello-world:` hello-world containerının loglarını gösterir.
+`docker logs hello-world:` hello-world containerının loglarını gösterir.
 
-`docker container run -p 8080:80 "image-name":` Çalıştırılan containera port numarası verilerek çalıştırabilir. 8080 hostun portunu, 80 ise containerın portunu belirtir. 
+`docker run -d -p 8080:80 "image-name":` Çalıştırılan containera port numarası verilerek çalıştırabilir. 8080 hostun portunu, 80 ise containerın portunu belirtir. "-d" ile sürekli çalışması sağlanır.
 
-`docker container run -dit "image-name" sh:` "-dit" komutu -d -it -tty birleşimidir. Containera interaktiflik ve sözde terminal bağlantısını ekleyerek arka planda çalıştırır. 
+`docker run -dit "image-name" sh:` "-dit" komutu -d -it -tty birleşimidir. Containera interaktiflik ve sözde terminal bağlantısını ekleyerek arka planda çalıştırır. 
 
-`docker container run -dit --net "network-name" "image-name" sh:` Oluşturulan network ile container oluşturur. 
+`docker run -dit --net "network-name" "image-name" sh:` Oluşturulan network ile container oluşturur. 
 
 `docker exec -it "container_id" sh:` Uzaktaki containera bir shell bağlantısı ile bağlanmamızı sağlar. 
 
 `docker top "container name or id:` Containerda hangi işlemlerin çalıştığını gösterir.
 
-`docker container run --rm -it hello-world sh:` Containerı çalıştırır. "--rm" container oluşturulduktan sonra sil demektir. "-it" "--interactive" ve "--tty" birleşimidir. Containera interaktif bağlantı yapar. "sh" ile de uzak makinedeki containera terminal bağlantısı ekler. "--rm" sadece container interaktif çalışırken olur. "-d" (detach) ile arka planda çalışsın diyemiyoruz.
+`docker run --rm -it hello-world sh:` Containerı çalıştırır. "--rm" container oluşturulduktan sonra sil demektir. "-it" "--interactive" ve "--tty" birleşimidir. Containera interaktif bağlantı yapar. "sh" ile de uzak makinedeki containera terminal bağlantısı ekler. "--rm" sadece container interaktif çalışırken olur. "-d" (detach) ile arka planda çalışsın diyemiyoruz.
 
 `docker stats "container name or id":` Çalışan containerın ne kadar kaynak kullandığını gösterir. 
 
 `docker attach "container-name or id":` Arka planda çalıştırılan containera bağlanmak için kullanılır. 
 
-`docker container run -d --memory=100m "image-name":` Oluşturulacak containera 100mb bellek limiti tanımlar. 
+`docker run -d --memory=100m "image-name":` Oluşturulacak containera 100mb bellek limiti tanımlar. 
 
-`docker container run -d --cpus="1.5" "image-name:` Sistemde bulunan işlemci çekirdeklerinin 1.5 tanesini kullanmasını sağlar. 
+`docker run -d --cpus="1.5" "image-name:` Sistemde bulunan işlemci çekirdeklerinin 1.5 tanesini kullanmasını sağlar. 
 
-`docker container run -d --cpuset-cpus="1,4" "image-name":` Sistemde bulunan işlemcinin 1 ve 4 numaralı işlemcilerini kullanmasını sağlar. 
+`docker run -d --cpuset-cpus="1,4" "image-name":` Sistemde bulunan işlemcinin 1 ve 4 numaralı işlemcilerini kullanmasını sağlar. 
 
-`docker container run --env deg1=deneme "image-name":` deg1 adında ortam değişkeni tanımlar.
+`docker run --env deg1=deneme "image-name":` deg1 adında ortam değişkeni tanımlar.
 
 `docker container rm "container name or id":` İsmi ya da ID'i verilen containerı siler. 
 
