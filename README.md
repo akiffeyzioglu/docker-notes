@@ -12,6 +12,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 * [Dockerfile](#Dockerfile)
 * [Docker Compose](#Docker-Compose)
 * [Docker Swarm](#Docker-Swarm)
+* [Docker Stack](#Docker-Stack)
 * [Multi Stage Build](#Multi-Stage-Build)
 * [Docker Save and Load](#Docker-Save-and-Load)
 * [Ortam Değişkenleri](#Ortam-Değişkenleri)
@@ -23,6 +24,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
   * [Network](#Network)
   * [Compose](#Compose)
   * [Swarm](#Swarm)
+  * [Stack](#Stack)
   * [Logs](#Logs)
   * [Save and Load](#Save-and-Load)
   * [Docker Commit](#Docker-Commit)
@@ -173,6 +175,10 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 * İki servis modu vardır. Replicated ve Global. Varsayılan olarak replicated çalışır. Replicated mod, kaç replika olacağı belirtilen durum, global ise belirtilmediği moddur. Tüm node’larda otomatik olarak hepsinde çalışır. Antivirüs gibi servisler global olarak çalıştırılır ve tüm node’larda olduğundan emin olunur.
 
 * Service oluştururken replica sayısı belirtilmezse default 1 tane oluşturulur.
+
+# Docker Stack
+
+* Stack, birden fazla servisi tek yaml dosyasında oluşturmayı ve ayağa kaldırmayı sağlar.
 
 # Multi Stage Build
 
@@ -330,6 +336,17 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker service rm "service-name":` İsmi verilen servisi siler. Doğrulama yapmadan direkt olarak servisi siler, kullanırken dikkatli olunmalıdır. 
 
+# Stack
+
+`docker stack ls:` Stackleri listeler. 
+
+`docker stack services "stack-name":` İsmi verilen stackin servislerini listeler.
+
+`docker service ps "service-name:` İsmi verilen servisin tasklerini listeler. 
+
+`docker stack rm "stack-name":` İsmi verilen stacki siler. 
+
+`docker stack deploy "stack-name":` İsmi yazılan yeni stack ayağa kaldırır veya var olan stacki günceller. 
 
 # Logs
 
