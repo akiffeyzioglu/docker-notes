@@ -13,6 +13,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 * [Docker Compose](#Docker-Compose)
 * [Docker Swarm](#Docker-Swarm)
 * [Docker Stack](#Docker-Stack)
+* [Docker Secret](#Docker-Secret)
 * [Multi Stage Build](#Multi-Stage-Build)
 * [Docker Save and Load](#Docker-Save-and-Load)
 * [Ortam Değişkenleri](#Ortam-Değişkenleri)
@@ -25,6 +26,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
   * [Compose](#Compose)
   * [Swarm](#Swarm)
   * [Stack](#Stack)
+  * [Secret](#Secret)
   * [Logs](#Logs)
   * [Save and Load](#Save-and-Load)
   * [Docker Commit](#Docker-Commit)
@@ -179,6 +181,16 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 # Docker Stack
 
 * Stack, birden fazla servisi tek yaml dosyasında oluşturmayı ve ayağa kaldırmayı sağlar.
+
+# Docker Secret 
+
+* Docker objesidir. Verileri encrypted şekilde saklamak için kullanılır.
+
+* Secretlar container içinde /run dizinin altında barınır. 
+
+* Secretlar sonradan değiştirilemez. Değiştirilmek isteniyorsa sonradan yeni dosya oluşturulup service’e update edilir.
+
+* Manager node’dan Worker node’a transfer edilirken de encrypted şekilde transfer edilir. 
 
 # Multi Stage Build
 
@@ -347,6 +359,22 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker stack rm "stack-name":` İsmi verilen stacki siler. 
 
 `docker stack deploy "stack-name":` İsmi yazılan yeni stack ayağa kaldırır veya var olan stacki günceller. 
+
+# Secret 
+
+`docker secret create "secret-name" file:` secret-name adında secret oluşturur. 
+
+`docker secret ls:` Sistemde bulunan secretları listeler.
+
+`docker secret inspect "secret-name":` İsmi verilen secretın ayrıntılarını verir. 
+
+`docker secret rm  "secret-name":` İsmi verilen secretı siler.
+
+`echo "deneme" | docker secret create "secret-name":` Terminal üzerinden secret oluşturur. 
+
+`docker service update --secret-rm "secret-name" "service-name":` İsmi verilen serviste, ismi verilen secretı siler.  
+
+`docker service update --secret-add "secret-name" "service-name:` İsmi verilen serviste, ismi verilen secretı ekler.
 
 # Logs
 
