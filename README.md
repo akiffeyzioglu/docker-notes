@@ -264,6 +264,8 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker container prune:` Çalışmayan tüm containerları siler. 
 
+`docker system prune:` Sistemde bulunan tüm çalışmayan containerları, kullanılmayan networkleri, kullanılmayan imajları ve build önbelleklerini temizler. 
+
 # Image
 
 `docker image build -t image-name .:` Dockerfile yazılıktan sonra image build işlemini gerçekleştirir. 
