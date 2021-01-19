@@ -234,6 +234,8 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker logs hello-world:` hello-world containerının loglarını gösterir.
 
+`docker cp "container-id or container-name":path host_path:` İsmi ya da ID'si verilen container'dan host'a dosya kopyalar. 
+
 `docker run -d -p 8080:80 "image-name":` Çalıştırılan containera port numarası verilerek çalıştırabilir. 8080 hostun portunu, 80 ise containerın portunu belirtir. "-d" ile sürekli çalışması sağlanır.
 
 `docker run -dit "image-name" sh:` "-dit" komutu -d -it -tty birleşimidir. Containera interaktiflik ve sözde terminal bağlantısını ekleyerek arka planda çalıştırır. 
