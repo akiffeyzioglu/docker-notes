@@ -226,13 +226,13 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker container ls -aq:` Sistemde bulunan tüm containerların ID'sini listeler.
 
-`docker run hello-world:` hello-world adında container çalıştırır. 
+`docker run --name hello-world hello-world:` hello-world isminde container çalıştırır. 
 
-`docker start hello-world:` hello-world containerı başlatır.
+`docker start hello-world:` hello-world isimli containerı başlatır.
 
-`docker stop hello-world:` hello-world containerını durdurur.
+`docker stop hello-world:` hello-world isimli containerı durdurur.
 
-`docker logs hello-world:` hello-world containerının loglarını gösterir.
+`docker logs hello-world:` hello-world isimli containerın loglarını gösterir.
 
 `docker cp "container-id or container-name":path host_path:` İsmi ya da ID'si verilen container'dan host'a dosya kopyalar. 
 
@@ -246,7 +246,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker top "container name or id:` Containerda hangi işlemlerin çalıştığını gösterir.
 
-`docker run --rm -it hello-world sh:` Containerı çalıştırır. "--rm" container oluşturulduktan sonra sil demektir. "-it" "--interactive" ve "--tty" birleşimidir. Containera interaktif bağlantı yapar. "sh" ile de uzak makinedeki containera terminal bağlantısı ekler. "--rm" sadece container interaktif çalışırken olur. "-d" (detach) ile arka planda çalışsın diyemiyoruz.
+`docker run --rm -it hello-world sh:` Containerı çalıştırır. "--rm" container kapandıktan sonra sil demektir. "-it" "--interactive" ve "--tty" birleşimidir. Containera interaktif bağlantı yapar. "sh" ile de uzak makinedeki containera terminal bağlantısı ekler. "--rm" sadece container interaktif çalışırken olur. "-d" (detach) ile arka planda çalışsın diyemiyoruz.
 
 `docker stats "container name or id":` Çalışan containerın ne kadar kaynak kullandığını gösterir. 
 
