@@ -216,6 +216,8 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker info:` Sisteminizde bulunan containerları, ve diğer sistem bilgilerinizi görmenizi sağlar. 
 
+`docker system prune:` Sistemde bulunan tüm çalışmayan containerları, kullanılmayan networkleri, kullanılmayan imajları ve build önbelleklerini temizler.
+
 `docker system df:` Docker'ın disk kullanım bilgilerini verir. 
 
 ## Container
@@ -267,8 +269,6 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 `docker container rm -f "container name or id":` İsmi ya da ID'si verilen containerı çalışırken dahi siler. 
 
 `docker container prune:` Çalışmayan tüm containerları siler. 
-
-`docker system prune:` Sistemde bulunan tüm çalışmayan containerları, kullanılmayan networkleri, kullanılmayan imajları ve build önbelleklerini temizler. 
 
 # Image
 
