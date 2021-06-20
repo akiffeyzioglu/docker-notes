@@ -126,6 +126,8 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 * CMD: Bu imajdan container oluşturulduğu zaman varsayılan olarak çalıştırılmak istenen komut yazılır.
 
+* ENTRYPOINT: Container oluşturulurken verilen parametreler ENTRYPOINT içerisinde yazılan komutların sonuna eklenir.  
+
 * HEALTHCHECK: Bu komut ile containerın çalışıp çalışmadığı kontrol edilebilir. 
 
 * ENV: Ortam değişkeni tanımlanmasını sağlar.
