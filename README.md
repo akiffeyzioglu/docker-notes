@@ -272,6 +272,9 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker container prune:` Çalışmayan tüm containerları siler. 
 
+`docker ps --filter="exited":` Sistemde bulunan sadece çalışmayan containerları listeler.
+
+`docker ps --filter="running":` Sistemde bulunan sadece çalışan containerları listeler.
 # Image
 
 `docker image build -t image-name .:` Dockerfile yazılıktan sonra image build işlemini gerçekleştirir. 
