@@ -331,9 +331,9 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 `docker-compose logs:` Servislerin loglarını görüntüler.
 
-`docker-compose exec "service-name" sh:` Compose ile oluşturulan servise interkativ shell bağlantısı yapar. 
+`docker-compose exec "service-name" sh:` Compose ile oluşturulan servise interaktiv shell bağlantısı yapar. 
 
-`docker-compose build:` yaml dosyasında build ile imaj oluşturulmuş ise imajj da sonradan yapılan değişiklikleri kaydeder ve yeni değişikliklerin olduğu imajı kullanılmaya hazır hale getirir
+`docker-compose build:` yaml dosyasında build ile imaj oluşturulmuş ise imaj da sonradan yapılan değişiklikleri kayıt eder ve yeni değişikliklerin olduğu imajı kullanılmaya hazır hale getirir.
 
 # Swarm 
 
