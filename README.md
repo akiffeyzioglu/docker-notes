@@ -100,7 +100,7 @@ Bu repository [A'dan Z'ye Docker](https://www.udemy.com/course/adan-zye-docker "
 
 # Dockerfile
 
-* Dockerfile dosyası oluşturulurken "Dockerfile" şeklinde oluşturulmalıdır. Uzantı belirtilmesine gerek yoktur.
+* Dockerfile dosyası oluşturulurken default "Dockerfile" şeklinde oluşturulur. Dockerfile.new, Dockerfile.env, Dockerfile.prod gibi örnekler ile aynı dizinde birden fazla Dockerfile oluşturulabilir. 
 
 * Dockerfile oluştururken komutların sıralaması önemlidir.
 
